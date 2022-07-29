@@ -18,7 +18,7 @@ apt-get install -y tzdata
 dpkg-reconfigure --frontend noninteractive tzdata
 
 
-apt-get -ymq install openms
+apt-get -ymq install openms maven
 
 %help
     This is a demo container used to illustrate a def file.
