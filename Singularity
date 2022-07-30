@@ -20,6 +20,10 @@ dpkg-reconfigure --frontend noninteractive tzdata
 
 apt-get -ymq install openms maven
 
+#maven installations
+
+mvn clean install -pl MetFragLib -am -DskipTests
+mvn clean install -pl MetFragCommandLine -am -DskipTests
 
 %environment
   export IMAGE_NAME="openms"
