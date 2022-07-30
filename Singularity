@@ -20,5 +20,16 @@ dpkg-reconfigure --frontend noninteractive tzdata
 
 apt-get -ymq install openms maven
 
+
+%environment
+  export IMAGE_NAME="openms"
+  
+cat << EOF >> ~/.Rprofile
+
+options(patRoon.path.OpenMS = "/usr/bin") #
+
+
+EOF
+  
 %help
     This is a demo container used to illustrate a def file.
