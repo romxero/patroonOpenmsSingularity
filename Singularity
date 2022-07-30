@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: patroonrs:latest
+From: patroonorg/patroonrs:latest
 
 %labels
     Version v0.0.1
