@@ -20,6 +20,7 @@ dpkg-reconfigure --frontend noninteractive tzdata
 
 apt-get -ymq install openms maven
 
+strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
 
 %environment
 
