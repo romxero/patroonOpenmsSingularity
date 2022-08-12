@@ -28,23 +28,21 @@ export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64:/usr/local/lib:/usr/local/lib64:/us
 
 export IMAGE_NAME="openms"
 
-touch ~/.Rprofile
-
-if ! grep "patRoon.path.OpenMS" $HOME/.Rprofile;
-then
- 
-cat << EOF >> ~/.Rprofile
-
-options(patRoon.path.OpenMS = "/usr/bin") #
-
-
-
-EOF
-
-
-
-fi  
-
+#we are commenting out the rprofile thing
+#touch ~/.Rprofile
+#if ! grep "patRoon.path.OpenMS" $HOME/.Rprofile;
+#then 
+#cat << EOF >> ~/.Rprofile
+#
+#options(patRoon.path.OpenMS = "/usr/bin") #
+#
+#
+#
+#EOF
+#
+#
+#
+#fi  
 
   
 %help
