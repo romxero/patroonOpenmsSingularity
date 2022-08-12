@@ -20,20 +20,31 @@ dpkg-reconfigure --frontend noninteractive tzdata
 
 apt-get -ymq install openms maven
 
-#maven installations
-
-mvn clean install -pl MetFragLib -am -DskipTests
-mvn clean install -pl MetFragCommandLine -am -DskipTests
 
 %environment
-  export IMAGE_NAME="openms"
-  
+
+export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64:/usr/local/lib:/usr/local/lib64:/usr/lib:/usr/lib64:/lib:/lib64:$LD_LIBRARY_PATH
+
+export IMAGE_NAME="openms"
+
+touch ~/.Rprofile
+
+if ! grep "patRoon.path.OpenMS" $HOME/.Rprofile;
+then
+ 
 cat << EOF >> ~/.Rprofile
 
 options(patRoon.path.OpenMS = "/usr/bin") #
 
 
+
 EOF
+
+
+
+fi  
+
+
   
 %help
     This is a demo container used to illustrate a def file.
